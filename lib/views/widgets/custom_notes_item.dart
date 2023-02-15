@@ -35,13 +35,14 @@ class CustomNoteItem extends StatelessWidget {
               icon: const Icon(
                 FontAwesomeIcons.trash,
                 color: Colors.black,
+                size: 25,
               ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(right: 24),
             child: Text(
-              'Mar2,1999',
+              'Mar 2 , 1999',
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.black.withOpacity(0.5),
