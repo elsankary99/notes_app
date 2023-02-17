@@ -9,10 +9,25 @@ class NotesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+              context: context,
+              builder: (context) {
+                return const ShowBottonSheet();
+              });
+        },
         child: Icon(Icons.add),
       ),
       body: const NotesViewBody(),
     );
+  }
+}
+
+class ShowBottonSheet extends StatelessWidget {
+  const ShowBottonSheet({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
