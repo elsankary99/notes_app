@@ -32,6 +32,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
   Widget build(BuildContext context) {
     return Form(
       key: formKey,
+      autovalidateMode: autovalidateMode,
       child: Column(children: [
         CustomTextFormFiel(
             hintText: 'Title',
@@ -45,7 +46,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             },
             hintText: 'Content',
             maxLines: 5),
-        const SizedBox(height: 45),
+        const SizedBox(height: 35),
         CustomButton(onTap: () {
           if (formKey.currentState!.validate()) {
             formKey.currentState!.save();
